@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ViewOrder">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/action_round" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="-2dp"
+        android:elevation="10dp"
+
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/orderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Order "
+                android:fontFamily="@font/coresans_cr_medium"
+                android:textColor="@color/colorBalck"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Products"
+                android:fontFamily="@font/coresans_cr_medium"
+                android:textColor="@color/colorBalck"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productsinOrder"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:text="Total Nrs:"
+                    android:fontFamily="@font/coresans_cr_medium"
+                    android:textColor="@color/colorBalck"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Deliver to: "
+                android:fontFamily="@font/coresans_cr_medium"
+                android:textColor="@color/colorBalck"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Mobile:"
+                android:fontFamily="@font/coresans_cr_medium"
+                android:textColor="@color/colorBalck"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Username :"
+                android:fontFamily="@font/coresans_cr_medium"
+                android:textColor="@color/colorBalck"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/txtaccept"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_round"
+                    android:gravity="center"
+                    android:text="Accept"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/txtrrject"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_round_red"
+                    android:gravity="center"
+                    android:text="Reject"
+                    android:textColor="@color/colorWhite"
+                    android:layout_margin="5dp"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <!--    <TextView-->
+        <!--        android:id="@+id/txt_itmecount"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginLeft="15dp"-->
+        <!--        android:padding="2dp"-->
+        <!--        android:text="0 orders"-->
+        <!--        android:textColor="@color/colorBalck" />-->
+
+        <!--    <RelativeLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content">-->
+
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/recycle_pending"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1" />-->
+        <!--        <TextView-->
+        <!--            android:id="@+id/txtNodata"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:padding="10dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:visibility="gone"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_mar ginRight="10dp"-->
+        <!--            android:textSize="18dp"-->
+        <!--            android:text="No pending orders found at the moment."-->
+        <!--            android:layout_height="wrap_content"/>-->
+        <!--    </RelativeLayout>-->
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
